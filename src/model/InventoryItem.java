@@ -7,6 +7,7 @@ import java.awt.*;
  */
 public class InventoryItem {
     private final int id;
+    private int quantity;
     private Image image;
     private String name;
     private double price;
@@ -63,6 +64,22 @@ public class InventoryItem {
 
     public void setSize(String size) {
         this.size = size;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public static int getIdInt() {
+        return idInt;
+    }
+
+    public static void setIdInt(int idInt) {
+        InventoryItem.idInt = idInt;
     }
 
     @Override
