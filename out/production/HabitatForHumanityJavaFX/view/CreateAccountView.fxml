@@ -8,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateAccountController">
    <top>
       <Text fx:id="newAccountText" strokeType="OUTSIDE" strokeWidth="0.0" text="Create New Account" textAlignment="CENTER" wrappingWidth="373.8134765625" BorderPane.alignment="CENTER">
          <font>
@@ -148,8 +147,8 @@
    <bottom>
       <HBox fx:id="buttonBox" alignment="CENTER" prefHeight="57.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="backButton" mnemonicParsing="false" text="Back" />
-            <Button fx:id="createButton" mnemonicParsing="false" text="Create" />
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" text="Back" />
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#createAccount" text="Create" />
          </children>
       </HBox>
    </bottom>

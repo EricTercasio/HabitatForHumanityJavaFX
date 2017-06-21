@@ -7,20 +7,17 @@ import java.awt.*;
  */
 public class InventoryItem {
     private final int id;
-    private int quantity;
     private Image image;
     private String name;
     private double price;
     private String description;
-    private String size;
     private static int idInt = 0;
 
-    public InventoryItem(Image image, String name, double price, String description, String size) {
+    public InventoryItem(Image image, String name, double price, String description) {
         this.image = image;
         this.name = name;
         this.price = price;
         this.description = description;
-        this.size = size;
         id = idInt++;
     }
     public int getId(){
@@ -58,22 +55,6 @@ public class InventoryItem {
         this.description = description;
     }
 
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
     public static int getIdInt() {
         return idInt;
     }
@@ -89,7 +70,7 @@ public class InventoryItem {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", description='" + description + '\'' +
-                ", size='" + size + '\'' +
+                 + '\'' +
                 '}';
     }
 }
