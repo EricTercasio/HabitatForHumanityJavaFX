@@ -6,29 +6,44 @@ import java.awt.*;
  * Created by Kitcatski on 6/18/2017.
  */
 public class InventoryItem {
-    private final int id;
-    private Image image;
+    private int productID;
+    private String type;
     private String name;
     private double price;
     private String description;
-    private static int idInt = 0;
+    private String imageUrl;
 
-    public InventoryItem(Image image, String name, double price, String description) {
-        this.image = image;
+    public InventoryItem(int productID, String type, String name, double price, String description, String imageUrl) {
+        this.productID = productID;
+        this.type = type;
         this.name = name;
         this.price = price;
         this.description = description;
-        id = idInt++;
-    }
-    public int getId(){
-        return id;
-    }
-    public Image getImage() {
-        return image;
+        this.imageUrl = imageUrl;
     }
 
-    public void setImage(Image image) {
-        this.image = image;
+    public int getProductID() {
+        return productID;
+    }
+
+    public void setProductID(int productID) {
+        this.productID = productID;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {
@@ -55,18 +70,9 @@ public class InventoryItem {
         this.description = description;
     }
 
-    public static int getIdInt() {
-        return idInt;
-    }
-
-    public static void setIdInt(int idInt) {
-        InventoryItem.idInt = idInt;
-    }
-
     @Override
     public String toString() {
         return "InventoryItem{" +
-                "image=" + image +
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", description='" + description + '\'' +

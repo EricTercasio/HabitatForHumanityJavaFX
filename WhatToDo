@@ -1,0 +1,62 @@
+- Register View
+    Asks for email, username, password.
+- Login View
+    Admin login view
+    User Login view
+- Profile view
+    Allow change and set account info such as address and password
+        Password change view
+- Admin Menu (See reports, products, sales, user info)
+    Reports view (allow various kinds of reports)
+    Invoice view
+    Add/Edit user accounts
+- Product view
+    Search products view
+    View all products
+    Picture view
+- Cart View
+    See all items in shopping cart
+- Invoice view
+    view past invoices
+- Payment view
+    Asks for type, number and expiration of card
+- Finish view
+
+
+
+
+
+- Tables
+    Customers
+    Managers
+    Admins
+    Products
+    Invoice
+    Shopping Cart
+
+    Foreign Key vs. Primary Key
+        Books Table
+            ISBN : Primary Key
+            Title
+            Author
+            Publisher
+            Price
+        Instructors Table
+            InstructorID
+            FirstName
+            LastName
+            Rank
+            Salary
+            Phone
+        Courses Table
+            CourseID : Primary Key
+            CourseNumber(CSE248)
+            CourseTitle(Intro to java)
+            CourseDescription
+            NumberOfCredits
+            ISBN
+            InstructorID
+
+
+    *BUGS*
+        Adding ' to any string breaks the sql code.

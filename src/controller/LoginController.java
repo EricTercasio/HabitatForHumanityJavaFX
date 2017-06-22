@@ -80,9 +80,15 @@ public class LoginController implements Initializable{
     public void login(ActionEvent event) throws IOException {
         String username = usernameField.getText();
         String password = passwordField.getText();
+        String position = loginModel.isLogin(username,password);
 
-        if(loginModel.isLogin(username,password)){
-            changeScene("/view/ShoppingView.fxml",event);
+        if(position != null){
+            if(position.equals("Customer")) {
+                changeScene("/view/ShoppingView.fxml", event);
+            }
+            else if(position.equals("Manager")){
+                changeScene("/view/ManagerView.fxml",event);
+            }
         }else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Username/Password are incorrect.");

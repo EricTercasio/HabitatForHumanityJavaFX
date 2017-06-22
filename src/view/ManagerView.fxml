@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagerController">
+   <children>
+      <Label fx:id="managerText" layoutX="283.0" layoutY="20.0" text="Manager Window">
+         <font>
+            <Font name="Century Gothic Bold" size="39.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutButton" layoutX="14.0" layoutY="855.0" mnemonicParsing="false" text="Log Out" textFill="RED" />
+      <Label fx:id="addRemoveText" layoutX="51.0" layoutY="165.0" text="Add / remove product" underline="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <HBox fx:id="radioBox" layoutX="60.0" layoutY="219.0" prefHeight="31.0" prefWidth="242.0" spacing="40.0">
+         <children>
+            <RadioButton fx:id="addRadioButton" mnemonicParsing="false" onAction="#showAddVBox" text="Add" />
+            <RadioButton fx:id="removeRadioButton" mnemonicParsing="false" onAction="#showRemoveVBox" text="Remove" />
+         </children>
+      </HBox>
+      <VBox fx:id="addVBox" layoutX="51.0" layoutY="266.0" prefHeight="476.0" prefWidth="295.0" visible="false">
+         <children>
+            <HBox fx:id="sectionBox" prefHeight="42.0" prefWidth="295.0" spacing="32.0">
+               <children>
+                  <Label fx:id="sectionText" text="Section" />
+                  <ComboBox fx:id="sectionComboBox" prefWidth="150.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox fx:id="nameBox" prefHeight="42.0" prefWidth="325.0" spacing="40.0">
+               <children>
+                  <Label fx:id="name" text="Name" />
+                  <TextField fx:id="nameField" />
+               </children>
+            </HBox>
+            <HBox fx:id="priceBox" prefHeight="42.0" prefWidth="295.0" spacing="47.0">
+               <children>
+                  <Label fx:id="price" text="Price" />
+                  <TextField fx:id="priceField" prefHeight="22.0" prefWidth="187.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox fx:id="descriptionBox" prefHeight="222.0" prefWidth="295.0" spacing="5.0">
+               <children>
+                  <Label fx:id="description" text="Description" />
+                  <TextArea fx:id="descriptionArea" prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="productIDBox" prefHeight="32.0" prefWidth="295.0" spacing="10.0">
+               <children>
+                  <Label fx:id="productID" prefHeight="21.0" prefWidth="71.0" text="Product ID" />
+                  <TextField fx:id="productField" prefHeight="42.0" prefWidth="187.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="imageBox" prefHeight="71.0" prefWidth="295.0" spacing="40.0">
+               <children>
+                  <Label fx:id="image" text="Image" />
+                  <Button fx:id="imageButton" mnemonicParsing="false" onAction="#getImageUrl" text="File..." />
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="addButton" alignment="CENTER" mnemonicParsing="false" onAction="#addItem" text="Add" />
+         </children>
+      </VBox>
+      <VBox fx:id="removeVBox" layoutX="51.0" layoutY="256.0" prefHeight="434.0" prefWidth="295.0" visible="false">
+         <children>
+            <HBox prefHeight="37.0" prefWidth="295.0" spacing="20.0">
+               <children>
+                  <Label fx:id="productIDText" text="Product ID" />
+                  <TextField fx:id="productIDField" />
+               </children>
+            </HBox>
+            <Button fx:id="removeButton" mnemonicParsing="false" text="Remove" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

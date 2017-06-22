@@ -1,11 +1,9 @@
 package controller;
 
-import org.sqlite.SQLiteConnection;
+import model.InventoryItem;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by Eric on 6/20/2017.
@@ -28,31 +26,83 @@ public class LoginModel {
             return false;
         }
     }
-    public boolean isLogin(String user, String pass){
+    public ArrayList<InventoryItem> getProduct(String type) throws SQLException {
+        int i = 0;
+        ArrayList<InventoryItem> inventoryItems = new ArrayList<>();
+        int productID;
+        String name;
+        double price;
+        String description;
+        String imageUrl;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        String query = "select * from Customer where username=? and password=?";
+        String query = "SELECT * from Product where Type = ?";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1,type);
+        resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()) {
+            productID = resultSet.getInt(1);
+            type = resultSet.getString(2);
+            name = resultSet.getString(3);
+            price = resultSet.getDouble(4);
+            description = resultSet.getString(5);
+            imageUrl = resultSet.getString(6);
+            InventoryItem inventoryItem = new InventoryItem(productID,type,name,price,description,imageUrl);
+            inventoryItems.add(inventoryItem);
+        }
+        preparedStatement.close();
+        resultSet.close();
+        connection.close();
+        return inventoryItems;
+    }
+    public String isLogin(String user, String pass){
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        String query = "select * from People where username=? and password=?";
         try{
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1,user);
             preparedStatement.setString(2,pass);
             resultSet = preparedStatement.executeQuery();
+            String position = resultSet.getString(13);
             if(resultSet.next()){
-                return true;
+                System.out.println(position);
+                return position;
             }else{
-                return false;
+                return null;
             }
         }catch(SQLException e){
-            return false;
+            return null;
         }finally{
             try{
                 preparedStatement.close();
                 resultSet.close();
                 connection.close();
             }catch(SQLException e){
-                return false;
+                return null;
             }
         }
+    }
+    public void createCustomer(String firstName,String lastName,String username,String password,String phoneNumber,
+    String street, String city,String state, String zip, String email, int cartID, String position) throws SQLException {
+        PreparedStatement preparedStatement;
+        String query = "INSERT INTO People (FirstName,LastName,Username,Password,PhoneNumber,Street,City,State,Zip,Email,CartID,Position) VALUES("
+                + "'" + firstName + "', " + "'" + lastName + "', "+ "'" + username + "', " + "'" + password + "', "
+                + "'" + phoneNumber + "', "+ "'" + street + "', "+ "'" + city + "', "+ "'" + state + "', " + "'" + zip + "', "+ "'" + email + "', "
+                + "'" + cartID + "', "+ "'" + position + "'); ";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
+        connection.close();
+    }
+    public void createItem(String type, String name, double price, String description, Integer ID, String imageURL) throws SQLException {
+        PreparedStatement preparedStatement;
+        String query = "INSERT INTO Product"  +"(ProductID,Type,Name,Price,Description,Image) VALUES("
+                +"'" + ID + "', " +"'" + type + "', " + "'" + name + "', "+ "'" + price + "', " + "'" + description + "', "+ "'" + imageURL+"')";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
+        connection.close();
     }
     public void restartConnection(){
         connection = SqliteConnection.Connector();

@@ -19,14 +19,14 @@ public class InventoryBag {
             inventoryItems.remove(inventoryItem);
         }
     }
-    public InventoryItem findById(int id){
-        for (int i = 0; i < inventoryItems.size(); i++){
-            if(inventoryItems.get(i).getId() == id){
-                return inventoryItems.get(i);
-            }
-        }
-        return null;
-    }
+//    public InventoryItem findById(int id){
+//        for (int i = 0; i < inventoryItems.size(); i++){
+//            if(inventoryItems.get(i).getId() == id){
+//                return inventoryItems.get(i);
+//            }
+//        }
+//        return null;
+//    }
     public void display(){
         for (int i = 0; i < inventoryItems.size(); i++){
             System.out.print(inventoryItems.get(i).toString());

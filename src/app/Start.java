@@ -12,6 +12,7 @@ public class Start extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         SqliteConnection.Connector();
+
         Parent root = FXMLLoader.load(getClass().getResource("/view/LoginView.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 600, 400));

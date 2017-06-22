@@ -37,7 +37,7 @@
       </HBox>
       <HBox fx:id="woodBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
          <children>
-            <Button fx:id="woodButton" alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" text="Wood" />
+            <Button fx:id="woodButton" alignment="CENTER" mnemonicParsing="false" onAction="#woodSection" prefHeight="31.0" prefWidth="85.0" text="Wood" />
          </children>
       </HBox>
       <HBox fx:id="metalBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
