@@ -42,22 +42,22 @@
       </HBox>
       <HBox fx:id="metalBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
-            <Button fx:id="metal" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" text="Metal" />
+            <Button fx:id="metal" mnemonicParsing="false" onAction="#metalSection" prefHeight="31.0" prefWidth="77.0" text="Metal" />
          </children>
       </HBox>
       <HBox fx:id="toolsBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
          <children>
-            <Button fx:id="toolsButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" text="Tools" />
+            <Button fx:id="toolsButton" mnemonicParsing="false" onAction="#toolSection" prefHeight="31.0" prefWidth="77.0" text="Tools" />
          </children>
       </HBox>
       <HBox fx:id="plasticsBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
          <children>
-            <Button fx:id="plasticsButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" text="Plastics" />
+            <Button fx:id="plasticsButton" mnemonicParsing="false" onAction="#plasticSection" prefHeight="31.0" prefWidth="77.0" text="Plastics" />
          </children>
       </HBox>
       <HBox fx:id="miscBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
          <children>
-            <Button fx:id="miscButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" text="Misc" />
+            <Button fx:id="miscButton" mnemonicParsing="false" onAction="#miscSection" prefHeight="31.0" prefWidth="77.0" text="Misc" />
          </children>
       </HBox>
       <HBox fx:id="categoryBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
@@ -75,6 +75,6 @@
       <VBox fx:id="itemBox4" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <VBox fx:id="itemBox5" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
       <VBox fx:id="itemBox6" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-      <Button fx:id="logoutButton" mnemonicParsing="false" text="Logout" textFill="RED" GridPane.rowIndex="4" />
+      <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" text="Logout" textFill="RED" GridPane.rowIndex="4" />
    </children>
 </GridPane>
