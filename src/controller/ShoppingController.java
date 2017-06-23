@@ -7,19 +7,20 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.InventoryItem;
+import org.sqlite.util.StringUtils;
 
+import javax.swing.text.html.Option;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
@@ -70,6 +71,42 @@ public class ShoppingController  implements Initializable{
     private Button toolsButton;
 
     @FXML
+    private Button addToCartButton1;
+
+    @FXML
+    private Button addToCartButton2;
+
+    @FXML
+    private Button addToCartButton3;
+
+    @FXML
+    private Button addToCartButton4;
+
+    @FXML
+    private Button addToCartButton5;
+
+    @FXML
+    private Button addToCartButton6;
+
+    @FXML
+    private Hyperlink descriptionLink1;
+
+    @FXML
+    private Hyperlink descriptionLink2;
+
+    @FXML
+    private Hyperlink descriptionLink3;
+
+    @FXML
+    private Hyperlink descriptionLink4;
+    @FXML
+    private Hyperlink descriptionLink5;
+
+    @FXML
+    private Hyperlink descriptionLink6;
+
+
+    @FXML
     private VBox itemBox5;
 
     @FXML
@@ -100,6 +137,9 @@ public class ShoppingController  implements Initializable{
 
     private ArrayList<VBox> itemBoxs = new ArrayList<>();
 
+    private ArrayList<Button> addToCartButtons = new ArrayList<>();
+
+    private ArrayList<Hyperlink> descriptionLinks = new ArrayList<>();
     @FXML
     void f70000(ActionEvent event) {
 
@@ -113,7 +153,18 @@ public class ShoppingController  implements Initializable{
         itemBoxs.add(itemBox4);
         itemBoxs.add(itemBox5);
         itemBoxs.add(itemBox6);
-
+        addToCartButtons.add(addToCartButton1);
+        addToCartButtons.add(addToCartButton2);
+        addToCartButtons.add(addToCartButton3);
+        addToCartButtons.add(addToCartButton4);
+        addToCartButtons.add(addToCartButton5);
+        addToCartButtons.add(addToCartButton6);
+        descriptionLinks.add(descriptionLink1);
+        descriptionLinks.add(descriptionLink2);
+        descriptionLinks.add(descriptionLink3);
+        descriptionLinks.add(descriptionLink4);
+        descriptionLinks.add(descriptionLink5);
+        descriptionLinks.add(descriptionLink6);
     }
     public void woodSection(ActionEvent event) throws SQLException {
         clearItems();
@@ -145,28 +196,60 @@ public class ShoppingController  implements Initializable{
         setItems(inventoryItems);
         loginModel.restartConnection();
     }
-    public void setItems(ArrayList<InventoryItem> inventoryItems){
-        for (int i = 0 ; i < inventoryItems.size(); i++){
-            InventoryItem inventoryItem = inventoryItems.get(i);
-            if(inventoryItem == null){
-                System.out.println("ERROR");
-            }
-            Label name = new Label(inventoryItem.getName());
-            Hyperlink descriptionLink = new Hyperlink("Description");
-            Label price = new Label("$"+String.valueOf(inventoryItem.getPrice()));
-            String imageUrl = "file:///" + inventoryItem.getImageUrl();
-            Button addToCartButton = new Button("Add to cart");
-            ImageView imageView = new ImageView(imageUrl);
-            imageView.setPreserveRatio(true);
-            imageView.setSmooth(true);
-            imageView.setCache(true);
-            imageView.setFitWidth(90);
-            if(!itemBoxs.get(i).getChildren().isEmpty()){
-                itemBoxs.get(i).getChildren().clear();
-            }
-            itemBoxs.get(i).getChildren().addAll(name,imageView,descriptionLink,price,addToCartButton);
-            itemBoxs.get(i).setAlignment(Pos.CENTER);
+
+    public void addToCart(ActionEvent event){
+        TextInputDialog inputDialog = new TextInputDialog();
+        inputDialog.setContentText("Enter the quantity");
+        inputDialog.setHeaderText("Quantity");
+        Optional<String> value = inputDialog.showAndWait();
+        if(!value.get().isEmpty()  && value.get().matches("-?\\d+(\\.\\d+)?") && Integer.valueOf(value.get()) > 0){
+
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Not the correct format");
+            alert.showAndWait();
         }
+        }
+    public void openDescription(ActionEvent event) throws SQLException {
+         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+         Hyperlink hyperlink = (Hyperlink) event.getSource();
+         VBox parent = (VBox) hyperlink.getParent();
+         Label productIDLabel = (Label) parent.getChildren().get(0);
+         String productID = productIDLabel.getText().substring(5);
+         String description = loginModel.getDescriptionByID(productID);
+         dialog.setHeaderText("Description");
+         dialog.setContentText(description);
+         dialog.showAndWait();
+         loginModel.restartConnection();
+    }
+
+    public void setItems(ArrayList<InventoryItem> inventoryItems){
+        for (int i = 0 ; i < inventoryItems.size(); i++) {
+            InventoryItem inventoryItem = inventoryItems.get(i);
+            if (inventoryItem == null) {
+                System.out.println("ERROR");
+            } else {
+                Label productID = new Label("ID : "+String.valueOf(inventoryItem.getProductID()));
+                Label name = new Label(inventoryItem.getName());
+                Hyperlink descriptionLink = descriptionLinks.get(i);
+                descriptionLink.setVisible(true);
+                Label price = new Label("$" + String.valueOf(inventoryItem.getPrice()));
+                String imageUrl = "file:///" + inventoryItem.getImageUrl();
+                ImageView imageView = new ImageView(imageUrl);
+                Button button = addToCartButtons.get(i);
+                button.setVisible(true);
+                imageView.setPreserveRatio(true);
+                imageView.setSmooth(true);
+                imageView.setCache(true);
+                imageView.setFitWidth(50);
+                if (!itemBoxs.get(i).getChildren().isEmpty()) {
+                    itemBoxs.get(i).getChildren().clear();
+                }
+                itemBoxs.get(i).getChildren().addAll(productID,name, imageView, descriptionLink, price,button);
+                itemBoxs.get(i).setAlignment(Pos.CENTER);
+            }
+        }
+
     }
     public void logout(ActionEvent event) throws IOException {
         changeScene("/view/LoginView.fxml", event);
