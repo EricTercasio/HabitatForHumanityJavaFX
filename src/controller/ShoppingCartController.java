@@ -219,19 +219,27 @@ public class ShoppingCartController implements Initializable{
 
         loginModel.restartConnection();
     }
-    public void removeItems(ActionEvent event) throws SQLException {
+    public void removeItems(ActionEvent event) throws SQLException, IOException {
         Button button = (Button) event.getSource();
         HBox parent = (HBox) button.getParent();
         VBox vBox = (VBox) parent.getChildren().get(1);
         Label label = (Label) vBox.getChildren().get(4);
+        Label label1 = (Label)vBox.getChildren().get(2);
+        Label quantityLabel = (Label)vBox.getChildren().get(3);
         int lineItemId = Integer.parseInt(label.getText());
+        double itemPrice = Double.parseDouble(label1.getText().substring(9));
+        int quantity = Integer.parseInt(quantityLabel.getText().substring(11));
+        double totalItemPrice = itemPrice * quantity;
+        System.out.println(itemPrice);
         loginModel.deleteFromShoppingCart(userID,lineItemId);
         loginModel.restartConnection();
         loginModel.deleteLineItem(lineItemId);
         loginModel.restartConnection();
-        resetBoxs();
-        addToBoxs();
-        setItems();
+        double currentTotal = loginModel.getTotalByUserID(userID);
+        loginModel.restartConnection();
+        loginModel.setCartTotal(userID,currentTotal - totalItemPrice);
+        loginModel.restartConnection();
+        changeScene("/view/ShoppingCartView.fxml",event);
     }
     public void setUserID(int userID) {
         this.userID = userID;
@@ -284,16 +292,6 @@ public class ShoppingCartController implements Initializable{
         infoBoxs.add(infoBox8);
         infoBoxs.add(infoBox9);
         infoBoxs.add(infoBox10);
-    }
-    public void resetBoxs(){
-        for(int i = 0; i < itemBoxs.size(); i++){
-            itemBoxs.get(i).getChildren().clear();
-        }
-        itemBoxs.clear();
-        for(int i = 0; i < infoBoxs.size(); i++){
-            infoBoxs.get(i).getChildren().clear();
-        }
-        infoBoxs.clear();
     }
 }
 

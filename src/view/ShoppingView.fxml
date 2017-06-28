@@ -32,7 +32,7 @@
                </image>
             </ImageView>
             <Hyperlink fx:id="cartText" onAction="#goToCart" text="Cart" />
-            <Hyperlink fx:id="myAccountText" text="My Account" />
+            <Hyperlink fx:id="myAccountText" onAction="#goToMyAccount" text="My Account" />
          </children>
       </HBox>
       <HBox fx:id="woodBox" alignment="CENTER" prefHeight="104.0" prefWidth="228.0" GridPane.rowIndex="1">
@@ -100,5 +100,7 @@
             <Hyperlink fx:id="descriptionLink6" onAction="#openDescription" text="Description" visible="false" />
          </children></VBox>
       <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" text="Logout" textFill="RED" GridPane.rowIndex="4" />
+      <TextField fx:id="searchField" prefHeight="25.0" prefWidth="89.0" />
+      <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchSection" text="Search" GridPane.columnIndex="1" />
    </children>
 </GridPane>

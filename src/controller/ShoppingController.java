@@ -131,6 +131,14 @@ public class ShoppingController  implements Initializable{
     @FXML
     private HBox plasticsBox;
 
+
+    @FXML
+    private Button searchButton;
+
+    @FXML
+    private TextField searchField;
+
+
     private LoginModel loginModel = new LoginModel();
 
     private ArrayList<VBox> itemBoxs = new ArrayList<>();
@@ -147,6 +155,7 @@ public class ShoppingController  implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        category.setText("Welcome");
         userID = Start.getUserID();
         itemBoxs.add(itemBox1);
         itemBoxs.add(itemBox2);
@@ -168,32 +177,44 @@ public class ShoppingController  implements Initializable{
         descriptionLinks.add(descriptionLink6);
     }
     public void woodSection(ActionEvent event) throws SQLException {
+        category.setText("Wood Items");
         clearItems();
         ArrayList<InventoryItem> inventoryItems = loginModel.getProduct("Wood");
         setItems(inventoryItems);
         loginModel.restartConnection();
     }
     public void plasticSection(ActionEvent event) throws SQLException {
+        category.setText("Plastic Items");
         clearItems();
         ArrayList<InventoryItem> inventoryItems = loginModel.getProduct("Plastic");
         setItems(inventoryItems);
         loginModel.restartConnection();
     }
     public void toolSection(ActionEvent event) throws SQLException {
+        category.setText("Tool Items");
         clearItems();
         ArrayList<InventoryItem> inventoryItems = loginModel.getProduct("Tool");
         setItems(inventoryItems);
         loginModel.restartConnection();
     }
     public void metalSection(ActionEvent event) throws SQLException {
+        category.setText("Metal Items");
         clearItems();
         ArrayList<InventoryItem> inventoryItems = loginModel.getProduct("Metal");
         setItems(inventoryItems);
         loginModel.restartConnection();
     }
     public void miscSection(ActionEvent event) throws SQLException {
+        category.setText("Misc Items");
         clearItems();
         ArrayList<InventoryItem> inventoryItems = loginModel.getProduct("Misc");
+        setItems(inventoryItems);
+        loginModel.restartConnection();
+    }
+    public void searchSection(ActionEvent event) throws SQLException {
+        category.setText("Searched Items");
+        clearItems();
+        ArrayList<InventoryItem> inventoryItems = loginModel.searchProductByLikeString(searchField.getText());
         setItems(inventoryItems);
         loginModel.restartConnection();
     }
@@ -280,6 +301,9 @@ public class ShoppingController  implements Initializable{
     }
     public void goToCart(ActionEvent event) throws IOException {
         changeScene("/view/ShoppingCartView.fxml",event);
+    }
+    public void goToMyAccount(ActionEvent event) throws IOException {
+        changeScene("/view/MyAccountView.fxml",event);
     }
     public void changeScene(String url, ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(url));

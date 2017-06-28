@@ -2,29 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/PaymentController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/ShoppingCartController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/LineItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/PaymentView.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/ShoppingCartView.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/MyAccountController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/Invoice.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/MyAccountView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HabitatForHumanityDB.sqlite" afterPath="$PROJECT_DIR$/HabitatForHumanityDB.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/app/Start.class" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/app/Start.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/CreateAccountController.class" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/CreateAccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/LoginController.class" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/LoginModel.class" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/LoginModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/ShoppingController.class" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/ShoppingController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/model/Demo.class" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/model/Demo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/model/InventoryItem.class" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/model/InventoryItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/PaymentController.class" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/PaymentController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/ShoppingCartController.class" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/controller/ShoppingCartController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HabitatForHumanityJavaFX.iml" afterPath="$PROJECT_DIR$/HabitatForHumanityJavaFX.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/view/ShoppingView.fxml" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/view/ShoppingView.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/Start.java" afterPath="$PROJECT_DIR$/src/app/Start.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/view/PaymentView.fxml" afterPath="$PROJECT_DIR$/out/production/HabitatForHumanityJavaFX/view/PaymentView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/CreateAccountController.java" afterPath="$PROJECT_DIR$/src/controller/CreateAccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/controller/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/LoginModel.java" afterPath="$PROJECT_DIR$/src/controller/LoginModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/ManagerController.java" afterPath="$PROJECT_DIR$/src/controller/ManagerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/PaymentController.java" afterPath="$PROJECT_DIR$/src/controller/PaymentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/ShoppingCartController.java" afterPath="$PROJECT_DIR$/src/controller/ShoppingCartController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/ShoppingController.java" afterPath="$PROJECT_DIR$/src/controller/ShoppingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Demo.java" afterPath="$PROJECT_DIR$/src/model/Demo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/InventoryItem.java" afterPath="$PROJECT_DIR$/src/model/InventoryItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/ManagerView.fxml" afterPath="$PROJECT_DIR$/src/view/ManagerView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/PaymentView.fxml" afterPath="$PROJECT_DIR$/src/view/PaymentView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/ShoppingView.fxml" afterPath="$PROJECT_DIR$/src/view/ShoppingView.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -87,81 +83,133 @@
       <file leaf-file-name="LoginModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/LoginModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="322" column="13" lean-forward="false" selection-start-line="322" selection-start-column="13" selection-end-line="322" selection-end-column="13" />
+            <state relative-caret-position="581">
+              <caret line="564" column="30" lean-forward="false" selection-start-line="564" selection-start-column="30" selection-end-line="564" selection-end-column="30" />
               <folding>
-                <marker date="1498588169188" expanded="true" signature="1060:1096" ph="SELECT * fro... Product" />
-                <marker date="1498588169188" expanded="true" signature="2088:2128" ph="select * fro... Product" />
-                <marker date="1498588169188" expanded="true" signature="2608:2659" ph="UPDATE Shopp... " />
-                <marker date="1498588169188" expanded="true" signature="3118:3168" ph="SELECT Price... ShoppingCart" />
-                <marker date="1498588169188" expanded="true" signature="3682:3723" ph="select * fro... ShoppingCart" />
-                <marker date="1498588169188" expanded="true" signature="4557:4609" ph="select * fro... People" />
-                <marker date="1498588169188" expanded="true" signature="5591:5622" ph="DELETE FROM " />
-                <marker date="1498588169188" expanded="true" signature="6085:6126" ph="SELECT * WHE... " />
-                <marker date="1498588169188" expanded="true" signature="6523:6588" ph="UPDATE Shopp... " />
-                <marker date="1498588169188" expanded="true" signature="7192:7636" ph="INSERT INTO People... " />
-                <marker date="1498588169188" expanded="true" signature="7192:7638" ph="INSERT INTO People... " />
-                <marker date="1498588169188" expanded="true" signature="7960:7997" ph="UPDATE Peopl... " />
-                <marker date="1498588169188" expanded="true" signature="8459:8714" ph="INSERT INTO Product... " />
-                <marker date="1498588169188" expanded="true" signature="9075:9114" ph="select * fro... Product" />
-                <marker date="1498588169188" expanded="true" signature="9958:9978" ph="INSERT INTO LineItem... " />
-                <marker date="1498588169188" expanded="true" signature="9958:10071" ph="INSERT INTO LineItem... " />
-                <marker date="1498588169188" expanded="true" signature="10103:10129" ph="SELECT last_... " />
-                <marker date="1498588169188" expanded="true" signature="10685:10924" ph="INSERT INTO ShoppingCart... " />
-                <marker date="1498588169188" expanded="true" signature="10685:11120" ph="INSERT INTO ShoppingCart... " />
-                <marker date="1498588169188" expanded="true" signature="10685:11121" ph="INSERT INTO ShoppingCart... " />
-                <marker date="1498588169188" expanded="true" signature="11152:11178" ph="SELECT last_... " />
-                <marker date="1498588169188" expanded="true" signature="11824:11865" ph="select * fro... ShoppingCart" />
-                <marker date="1498588169188" expanded="true" signature="12231:12296" ph="UPDATE Shopp... " />
-                <marker date="1498588169188" expanded="true" signature="12831:12991" ph="SELECT LineI... ShoppingCart" />
-                <marker date="1498588169188" expanded="true" signature="13966:13999" ph="SELECT * FRO... LineItem" />
-                <marker date="1498588169188" expanded="true" signature="14829:14868" ph="SELECT * FRO... Product" />
+                <marker date="1498665513115" expanded="true" signature="1103:1139" ph="SELECT * fro... Product" />
+                <marker date="1498665513115" expanded="true" signature="2368:2401" ph="SELECt * FRO... People" />
+                <marker date="1498665513115" expanded="true" signature="3443:3483" ph="select * fro... Product" />
+                <marker date="1498665513115" expanded="true" signature="3963:4014" ph="UPDATE Shopp... " />
+                <marker date="1498665513115" expanded="true" signature="4473:4523" ph="SELECT Total... ShoppingCart" />
+                <marker date="1498665513115" expanded="true" signature="5037:5078" ph="select * fro... ShoppingCart" />
+                <marker date="1498665513115" expanded="true" signature="5912:5964" ph="select * fro... People" />
+                <marker date="1498665513115" expanded="true" signature="6946:6977" ph="DELETE FROM " />
+                <marker date="1498665513115" expanded="true" signature="7440:7481" ph="SELECT * FRO... ShoppingCart" />
+                <marker date="1498665513115" expanded="true" signature="7878:7943" ph="UPDATE Shopp... " />
+                <marker date="1498665513115" expanded="true" signature="8445:8510" ph="UPDATE Shopp... " />
+                <marker date="1498665513115" expanded="true" signature="8495:8510" ph="SELECT * FRO... ShoppingCart" />
+                <marker date="1498665513115" expanded="true" signature="8590:8655" ph="UPDATE Shopp... " />
+                <marker date="1498665513115" expanded="true" signature="8939:8994" ph="UPDATE Shopp... " />
+                <marker date="1498665513115" expanded="true" signature="9462:9906" ph="INSERT INTO People... " />
+                <marker date="1498665513115" expanded="true" signature="10230:10267" ph="UPDATE Peopl... " />
+                <marker date="1498665513115" expanded="true" signature="10729:10984" ph="INSERT INTO Product... " />
+                <marker date="1498665513115" expanded="true" signature="11345:11384" ph="select * fro... Product" />
+                <marker date="1498665513115" expanded="true" signature="12228:12341" ph="INSERT INTO LineItem... " />
+                <marker date="1498665513115" expanded="true" signature="12373:12399" ph="SELECT last_... " />
+                <marker date="1498665513115" expanded="true" signature="12955:13390" ph="INSERT INTO ShoppingCart... " />
+                <marker date="1498665513115" expanded="true" signature="13422:13448" ph="SELECT last_... " />
+                <marker date="1498665513115" expanded="true" signature="14119:14160" ph="select * fro... ShoppingCart" />
+                <marker date="1498665513115" expanded="true" signature="14526:14591" ph="UPDATE Shopp... " />
+                <marker date="1498665513115" expanded="true" signature="15126:15286" ph="SELECT LineI... ShoppingCart" />
+                <marker date="1498665513115" expanded="true" signature="16009:16042" ph="SELECT * FRO... LineItem" />
+                <marker date="1498665513115" expanded="true" signature="16872:16911" ph="SELECT * FRO... Product" />
+                <marker date="1498665513115" expanded="true" signature="17788:17923" ph="INSERT INTO Invoice... " />
+                <marker date="1498665513115" expanded="true" signature="17788:17928" ph="INSERT INTO Invoice... " />
+                <marker date="1498665513115" expanded="true" signature="17788:17942" ph="INSERT INTO Invoice... " />
+                <marker date="1498665513115" expanded="true" signature="17788:17945" ph="INSERT INTO Invoice... " />
+                <marker date="1498665513115" expanded="true" signature="17975:18001" ph="SELECT last_... " />
+                <marker date="1498665513115" expanded="true" signature="18766:18868" ph="UPDATE \&quot;Inv... " />
+                <marker date="1498665513115" expanded="true" signature="18766:18869" ph="UPDATE \&quot;Inv... " />
+                <marker date="1498665513115" expanded="true" signature="19488:19524" ph="SELECT * FRO... Invoice" />
+                <marker date="1498665513115" expanded="true" signature="20614:20655" ph="SELECT * FRO... Invoice" />
+                <marker date="1498665513115" expanded="true" signature="21477:21501" ph="UPDATE \&quot;Inv... " />
+                <marker date="1498665513115" expanded="true" signature="21477:21533" ph="UPDATE Peopl... " />
+                <marker date="1498665513115" expanded="true" signature="21477:21534" ph="UPDATE \&quot;Peo... " />
+                <marker date="1498665513115" expanded="true" signature="21980:22019" ph="DELETE from " />
+                <marker date="1498665513115" expanded="true" signature="22677:22744" ph="SELECT * FRO... Product" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoppingCartController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/ShoppingCartController.java">
+      <file leaf-file-name="ManagerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/ManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="294" column="9" lean-forward="false" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
+            <state relative-caret-position="541">
+              <caret line="178" column="5" lean-forward="false" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyAccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/MyAccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="107" column="67" lean-forward="false" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6194#6195#0" expanded="true" />
-                <element signature="e#6230#6231#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoppingCartView.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/ShoppingCartView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="MyAccountView.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/MyAccountView.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+            <state relative-caret-position="170">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
-                <marker date="1498584370974" expanded="true" signature="4588:4657" ph="..." />
-                <marker date="1498584370974" expanded="true" signature="4588:4671" ph="..." />
-                <marker date="1498584370974" expanded="true" signature="4807:5198" ph="..." />
-                <marker date="1498584370974" expanded="true" signature="4827:5119" ph="..." />
-                <marker date="1498584370974" expanded="true" signature="5137:5184" ph="..." />
+                <marker date="1498662771179" expanded="true" signature="2671:2689" ph="..." />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoppingView.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/ShoppingView.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1768">
+              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoppingController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/ShoppingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="157" column="33" lean-forward="false" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/ArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="163" column="11" lean-forward="false" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
+              <folding>
+                <element signature="e#6252#6253#0" expanded="true" />
+                <element signature="e#6320#6321#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentView.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/PaymentView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="CreateAccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/CreateAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="158" lean-forward="false" selection-start-line="10" selection-start-column="158" selection-end-line="10" selection-end-column="158" />
+            <state relative-caret-position="448">
+              <caret line="166" column="39" lean-forward="false" selection-start-line="166" selection-start-column="39" selection-end-line="166" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -170,44 +218,8 @@
       <file leaf-file-name="PaymentController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/PaymentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-582">
-              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Start.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-              <folding>
-                <element signature="e#721#722#0" expanded="true" />
-                <element signature="e#746#747#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="92" column="52" lean-forward="false" selection-start-line="92" selection-start-column="52" selection-end-line="92" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShoppingController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/ShoppingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-404">
-              <caret line="149" column="35" lean-forward="false" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
+            <state relative-caret-position="405">
+              <caret line="148" column="193" lean-forward="false" selection-start-line="148" selection-start-column="193" selection-end-line="148" selection-end-column="193" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -234,6 +246,7 @@
       <find>productID</find>
       <find>sys</find>
       <find>system.ou</find>
+      <find>total</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -269,21 +282,24 @@
         <option value="$PROJECT_DIR$/src/model/Wood.java" />
         <option value="$PROJECT_DIR$/src/model/Metal.java" />
         <option value="$PROJECT_DIR$/WhatToDo" />
-        <option value="$PROJECT_DIR$/src/controller/ManagerController.java" />
         <option value="$PROJECT_DIR$/src/view/ManagerView.fxml" />
-        <option value="$PROJECT_DIR$/src/controller/CreateAccountController.java" />
         <option value="$PROJECT_DIR$/src/view/ShoppingView.fxml" />
         <option value="$PROJECT_DIR$/src/view/ShoppingCartView.fxml" />
         <option value="$PROJECT_DIR$/src/model/InventoryItem.java" />
         <option value="$PROJECT_DIR$/src/model/Demo.java" />
         <option value="$PROJECT_DIR$/src/model/LineItem.java" />
         <option value="$PROJECT_DIR$/src/app/Start.java" />
-        <option value="$PROJECT_DIR$/src/controller/ShoppingController.java" />
         <option value="$PROJECT_DIR$/src/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/controller/PaymentController.java" />
         <option value="$PROJECT_DIR$/src/view/PaymentView.fxml" />
-        <option value="$PROJECT_DIR$/src/controller/LoginModel.java" />
         <option value="$PROJECT_DIR$/src/controller/ShoppingCartController.java" />
+        <option value="$PROJECT_DIR$/src/controller/CreateAccountController.java" />
+        <option value="$PROJECT_DIR$/src/view/MyAccountView.fxml" />
+        <option value="$PROJECT_DIR$/src/model/Invoice.java" />
+        <option value="$PROJECT_DIR$/src/controller/PaymentController.java" />
+        <option value="$PROJECT_DIR$/src/controller/MyAccountController.java" />
+        <option value="$PROJECT_DIR$/src/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/controller/LoginModel.java" />
+        <option value="$PROJECT_DIR$/src/controller/ShoppingController.java" />
       </list>
     </option>
   </component>
@@ -295,10 +311,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -338,25 +354,38 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -370,11 +399,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -388,11 +417,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -402,11 +431,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -420,11 +449,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HabitatForHumanityJavaFX" />
+              <option name="myItemId" value="HabitatForHumanityJavaFX-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -438,9 +467,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,7 +481,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/sqlite-jdbc-3.18.0 (1).jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/sqlite-jdbc-3.18.0(1).jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -964,14 +990,15 @@
       <workItem from="1498240854763" duration="13255000" />
       <workItem from="1498392351032" duration="5632000" />
       <workItem from="1498448195388" duration="36300000" />
+      <workItem from="1498619036054" duration="16127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101909000" />
+    <option name="totallyTimeSpent" value="118036000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -983,12 +1010,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32711306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271028" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17083333" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17209856" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1066,44 +1093,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/InventoryItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1134,13 +1123,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
@@ -1152,40 +1141,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/PeopleBag.java" />
     <entry file="file://$PROJECT_DIR$/src/app/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/img/Habitat_for_humanity.svg.png" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/view/ShoppingView.java" />
-    <entry file="file://$PROJECT_DIR$/src/view/CreateAccountView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1240,49 +1211,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ManagerView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3423">
-          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/sqlite-jdbc-3.18.0 (1).jar!/org/sqlite/core/CorePreparedStatement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/CreateAccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="161" column="59" lean-forward="false" selection-start-line="161" selection-start-column="59" selection-end-line="161" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/LoginView.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/sqlite-jdbc-3.18.0 (1).jar!/org/sqlite/core/CorePreparedStatement.class" />
+    <entry file="file://$PROJECT_DIR$/src/view/LoginView.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="32" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/InventoryItem.java">
@@ -1290,12 +1238,12 @@
         <state relative-caret-position="252">
           <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding>
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1647#1648#0" expanded="true" />
-            <element signature="e#1687#1688#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="false" />
+            <element signature="e#728#729#0" expanded="false" />
+            <element signature="e#1571#1572#0" expanded="false" />
+            <element signature="e#1602#1603#0" expanded="false" />
+            <element signature="e#1647#1648#0" expanded="false" />
+            <element signature="e#1687#1688#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1316,29 +1264,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/ShoppingView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2184">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding>
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/LineItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -1349,54 +1274,134 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="92" column="52" lean-forward="false" selection-start-line="92" selection-start-column="52" selection-end-line="92" selection-end-column="52" />
+        <state relative-caret-position="1258">
+          <caret line="110" column="52" lean-forward="false" selection-start-line="110" selection-start-column="52" selection-end-line="110" selection-end-column="52" />
+          <folding>
+            <marker date="1498618992035" expanded="true" signature="2753:3172" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/PaymentView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="158" lean-forward="false" selection-start-line="10" selection-start-column="158" selection-end-line="10" selection-end-column="158" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/ShoppingCartView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ShoppingController.java">
+    <entry file="file://$PROJECT_DIR$/src/view/CreateAccountView.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-404">
-          <caret line="149" column="35" lean-forward="false" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Invoice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#900#901#0" expanded="true" />
+            <element signature="e#946#947#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+            <element signature="e#1082#1083#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1142#1143#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/MyAccountView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <marker date="1498662771179" expanded="true" signature="2671:2689" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/com/sun/javafx/event/CompositeEventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/CreateAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="166" column="39" lean-forward="false" selection-start-line="166" selection-start-column="39" selection-end-line="166" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ShoppingCartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="232" column="38" lean-forward="true" selection-start-line="232" selection-start-column="38" selection-end-line="232" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/PaymentView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="158" lean-forward="false" selection-start-line="10" selection-start-column="158" selection-end-line="10" selection-end-column="158" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/ShoppingCartView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-          <folding>
-            <marker date="1498584370974" expanded="true" signature="4588:4657" ph="..." />
-            <marker date="1498584370974" expanded="true" signature="4588:4671" ph="..." />
-            <marker date="1498584370974" expanded="true" signature="4807:5198" ph="..." />
-            <marker date="1498584370974" expanded="true" signature="4827:5119" ph="..." />
-            <marker date="1498584370974" expanded="true" signature="5137:5184" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/PaymentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-582">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="405">
+          <caret line="148" column="193" lean-forward="false" selection-start-line="148" selection-start-column="193" selection-end-line="148" selection-end-column="193" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1405,48 +1410,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/LoginModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="322" column="13" lean-forward="false" selection-start-line="322" selection-start-column="13" selection-end-line="322" selection-end-column="13" />
+        <state relative-caret-position="581">
+          <caret line="564" column="30" lean-forward="false" selection-start-line="564" selection-start-column="30" selection-end-line="564" selection-end-column="30" />
           <folding>
-            <marker date="1498588169188" expanded="true" signature="1060:1096" ph="SELECT * fro... Product" />
-            <marker date="1498588169188" expanded="true" signature="2088:2128" ph="select * fro... Product" />
-            <marker date="1498588169188" expanded="true" signature="2608:2659" ph="UPDATE Shopp... " />
-            <marker date="1498588169188" expanded="true" signature="3118:3168" ph="SELECT Price... ShoppingCart" />
-            <marker date="1498588169188" expanded="true" signature="3682:3723" ph="select * fro... ShoppingCart" />
-            <marker date="1498588169188" expanded="true" signature="4557:4609" ph="select * fro... People" />
-            <marker date="1498588169188" expanded="true" signature="5591:5622" ph="DELETE FROM " />
-            <marker date="1498588169188" expanded="true" signature="6085:6126" ph="SELECT * WHE... " />
-            <marker date="1498588169188" expanded="true" signature="6523:6588" ph="UPDATE Shopp... " />
-            <marker date="1498588169188" expanded="true" signature="7192:7636" ph="INSERT INTO People... " />
-            <marker date="1498588169188" expanded="true" signature="7192:7638" ph="INSERT INTO People... " />
-            <marker date="1498588169188" expanded="true" signature="7960:7997" ph="UPDATE Peopl... " />
-            <marker date="1498588169188" expanded="true" signature="8459:8714" ph="INSERT INTO Product... " />
-            <marker date="1498588169188" expanded="true" signature="9075:9114" ph="select * fro... Product" />
-            <marker date="1498588169188" expanded="true" signature="9958:9978" ph="INSERT INTO LineItem... " />
-            <marker date="1498588169188" expanded="true" signature="9958:10071" ph="INSERT INTO LineItem... " />
-            <marker date="1498588169188" expanded="true" signature="10103:10129" ph="SELECT last_... " />
-            <marker date="1498588169188" expanded="true" signature="10685:10924" ph="INSERT INTO ShoppingCart... " />
-            <marker date="1498588169188" expanded="true" signature="10685:11120" ph="INSERT INTO ShoppingCart... " />
-            <marker date="1498588169188" expanded="true" signature="10685:11121" ph="INSERT INTO ShoppingCart... " />
-            <marker date="1498588169188" expanded="true" signature="11152:11178" ph="SELECT last_... " />
-            <marker date="1498588169188" expanded="true" signature="11824:11865" ph="select * fro... ShoppingCart" />
-            <marker date="1498588169188" expanded="true" signature="12231:12296" ph="UPDATE Shopp... " />
-            <marker date="1498588169188" expanded="true" signature="12831:12991" ph="SELECT LineI... ShoppingCart" />
-            <marker date="1498588169188" expanded="true" signature="13966:13999" ph="SELECT * FRO... LineItem" />
-            <marker date="1498588169188" expanded="true" signature="14829:14868" ph="SELECT * FRO... Product" />
+            <marker date="1498665513115" expanded="true" signature="1103:1139" ph="SELECT * fro... Product" />
+            <marker date="1498665513115" expanded="true" signature="2368:2401" ph="SELECt * FRO... People" />
+            <marker date="1498665513115" expanded="true" signature="3443:3483" ph="select * fro... Product" />
+            <marker date="1498665513115" expanded="true" signature="3963:4014" ph="UPDATE Shopp... " />
+            <marker date="1498665513115" expanded="true" signature="4473:4523" ph="SELECT Total... ShoppingCart" />
+            <marker date="1498665513115" expanded="true" signature="5037:5078" ph="select * fro... ShoppingCart" />
+            <marker date="1498665513115" expanded="true" signature="5912:5964" ph="select * fro... People" />
+            <marker date="1498665513115" expanded="true" signature="6946:6977" ph="DELETE FROM " />
+            <marker date="1498665513115" expanded="true" signature="7440:7481" ph="SELECT * FRO... ShoppingCart" />
+            <marker date="1498665513115" expanded="true" signature="7878:7943" ph="UPDATE Shopp... " />
+            <marker date="1498665513115" expanded="true" signature="8445:8510" ph="UPDATE Shopp... " />
+            <marker date="1498665513115" expanded="true" signature="8495:8510" ph="SELECT * FRO... ShoppingCart" />
+            <marker date="1498665513115" expanded="true" signature="8590:8655" ph="UPDATE Shopp... " />
+            <marker date="1498665513115" expanded="true" signature="8939:8994" ph="UPDATE Shopp... " />
+            <marker date="1498665513115" expanded="true" signature="9462:9906" ph="INSERT INTO People... " />
+            <marker date="1498665513115" expanded="true" signature="10230:10267" ph="UPDATE Peopl... " />
+            <marker date="1498665513115" expanded="true" signature="10729:10984" ph="INSERT INTO Product... " />
+            <marker date="1498665513115" expanded="true" signature="11345:11384" ph="select * fro... Product" />
+            <marker date="1498665513115" expanded="true" signature="12228:12341" ph="INSERT INTO LineItem... " />
+            <marker date="1498665513115" expanded="true" signature="12373:12399" ph="SELECT last_... " />
+            <marker date="1498665513115" expanded="true" signature="12955:13390" ph="INSERT INTO ShoppingCart... " />
+            <marker date="1498665513115" expanded="true" signature="13422:13448" ph="SELECT last_... " />
+            <marker date="1498665513115" expanded="true" signature="14119:14160" ph="select * fro... ShoppingCart" />
+            <marker date="1498665513115" expanded="true" signature="14526:14591" ph="UPDATE Shopp... " />
+            <marker date="1498665513115" expanded="true" signature="15126:15286" ph="SELECT LineI... ShoppingCart" />
+            <marker date="1498665513115" expanded="true" signature="16009:16042" ph="SELECT * FRO... LineItem" />
+            <marker date="1498665513115" expanded="true" signature="16872:16911" ph="SELECT * FRO... Product" />
+            <marker date="1498665513115" expanded="true" signature="17788:17923" ph="INSERT INTO Invoice... " />
+            <marker date="1498665513115" expanded="true" signature="17788:17928" ph="INSERT INTO Invoice... " />
+            <marker date="1498665513115" expanded="true" signature="17788:17942" ph="INSERT INTO Invoice... " />
+            <marker date="1498665513115" expanded="true" signature="17788:17945" ph="INSERT INTO Invoice... " />
+            <marker date="1498665513115" expanded="true" signature="17975:18001" ph="SELECT last_... " />
+            <marker date="1498665513115" expanded="true" signature="18766:18868" ph="UPDATE \&quot;Inv... " />
+            <marker date="1498665513115" expanded="true" signature="18766:18869" ph="UPDATE \&quot;Inv... " />
+            <marker date="1498665513115" expanded="true" signature="19488:19524" ph="SELECT * FRO... Invoice" />
+            <marker date="1498665513115" expanded="true" signature="20614:20655" ph="SELECT * FRO... Invoice" />
+            <marker date="1498665513115" expanded="true" signature="21477:21501" ph="UPDATE \&quot;Inv... " />
+            <marker date="1498665513115" expanded="true" signature="21477:21533" ph="UPDATE Peopl... " />
+            <marker date="1498665513115" expanded="true" signature="21477:21534" ph="UPDATE \&quot;Peo... " />
+            <marker date="1498665513115" expanded="true" signature="21980:22019" ph="DELETE from " />
+            <marker date="1498665513115" expanded="true" signature="22677:22744" ph="SELECT * FRO... Product" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ShoppingCartController.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/ManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="294" column="9" lean-forward="false" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
+        <state relative-caret-position="541">
+          <caret line="178" column="5" lean-forward="false" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MyAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="107" column="67" lean-forward="false" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6194#6195#0" expanded="true" />
-            <element signature="e#6230#6231#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/ShoppingView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="163" column="11" lean-forward="false" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
+          <folding>
+            <element signature="e#6252#6253#0" expanded="true" />
+            <element signature="e#6320#6321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ShoppingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="157" column="33" lean-forward="false" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

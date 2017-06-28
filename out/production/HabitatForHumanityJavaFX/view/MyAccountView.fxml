@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="841.0" prefWidth="1139.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyAccountController">
+   <children>
+      <Label fx:id="headerText" layoutX="457.0" layoutY="14.0" text="My Account">
+         <font>
+            <Font name="Malgun Gothic" size="41.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountInfoText" layoutX="138.0" layoutY="82.0" prefHeight="36.0" prefWidth="242.0" text="Account Information" underline="true">
+         <font>
+            <Font name="Malgun Gothic" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="idLabel" layoutX="138.0" layoutY="139.0" text="ID : " />
+      <Label fx:id="nameLabel" layoutX="138.0" layoutY="179.0" text="Name : " />
+      <Label fx:id="usernameLabel" layoutX="138.0" layoutY="210.0" text="Username : " />
+      <Label fx:id="phoneLabel" layoutX="138.0" layoutY="245.0" text="Phone Number : " />
+      <Label fx:id="streetLabel" layoutX="138.0" layoutY="280.0" text="Street : " />
+      <Label fx:id="cityLabel" layoutX="138.0" layoutY="315.0" text="City : " />
+      <Label fx:id="stateLabel" layoutX="138.0" layoutY="352.0" text="State : " />
+      <Label fx:id="zipLabel" layoutX="138.0" layoutY="393.0" text="Zip : " />
+      <Label fx:id="emailLabel" layoutX="138.0" layoutY="429.0" text="Email : " />
+      <Label fx:id="updateInfoText" layoutX="458.0" layoutY="82.0" text="Update Information" underline="true">
+         <font>
+            <Font name="Malgun Gothic" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="updateComboBox" layoutX="495.0" layoutY="127.0" prefWidth="150.0" />
+      <Text fx:id="invoiceText" layoutX="769.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Past Invoices" underline="true">
+         <font>
+            <Font name="Malgun Gothic" size="25.0" />
+         </font>
+      </Text>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="802.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <ComboBox fx:id="invoiceComboBox" layoutX="767.0" layoutY="127.0" prefWidth="150.0" />
+      <TextArea fx:id="invoiceArea" layoutX="767.0" layoutY="197.0" prefHeight="200.0" prefWidth="346.0" />
+      <Button layoutX="544.0" layoutY="157.0" mnemonicParsing="false" onAction="#updateInfo" text="Update" />
+      <Button layoutX="816.0" layoutY="157.0" mnemonicParsing="false" onAction="#getInvoice" text="Get" />
+   </children>
+</AnchorPane>

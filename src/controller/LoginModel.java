@@ -1,7 +1,9 @@
 package controller;
 
 import model.InventoryItem;
+import model.Invoice;
 import model.LineItem;
+import model.Person;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -57,6 +59,43 @@ public class LoginModel {
         resultSet.close();
         connection.close();
         return inventoryItems;
+    }
+    public Person getPersonByID(int userID) throws SQLException {
+        int id;
+        String firstName;
+        String lastName;
+        String username;
+        String password;
+        String phone;
+        String street;
+        String city;
+        String state;
+        String zip;
+        String email;
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String query = "SELECt * FROM People WHERE ID = ?";
+        preparedStatement =connection.prepareStatement(query);
+        preparedStatement.setInt(1,userID);
+        resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+        id = resultSet.getInt(1);
+        firstName = resultSet.getString(2);
+        lastName = resultSet.getString(3);
+        username = resultSet.getString(4);
+        password = resultSet.getString(5);
+        phone = resultSet.getString(6);
+        street = resultSet.getString(7);
+        city = resultSet.getString(8);
+        state = resultSet.getString(9);
+        zip = resultSet.getString(10);
+        email = resultSet.getString(11);
+        Person person = new Person(id,firstName,lastName,username,password,phone,street,city,state,zip,email);
+        preparedStatement.close();
+        resultSet.close();
+        connection.close();
+        return person;
+
     }
 
     public double getPriceByProductID(int productID) throws SQLException {
@@ -188,6 +227,25 @@ public class LoginModel {
         connection.close();
 
     }
+    public void clearShoppingCart(int userID) throws SQLException {
+        int counter = 1;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet;
+        String replaceQuery = "UPDATE ShoppingCart SET LineItemID" +counter + "=? WHERE UserID=?";
+        for(counter = 1; counter<10;counter++) {
+            replaceQuery = "UPDATE ShoppingCart SET LineItemID" +counter + "=? WHERE UserID=?";
+            preparedStatement = connection.prepareStatement(replaceQuery);
+            preparedStatement.setInt(1,0);
+            preparedStatement.setInt(2, userID);
+            preparedStatement.executeUpdate();
+        }
+        preparedStatement = connection.prepareStatement("UPDATE ShoppingCart SET TotalPrice = 0 WHERE UserID = ?");
+        preparedStatement.setInt(1,userID);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
+        connection.close();
+
+    }
     public void createCustomer(String firstName,String lastName,String username,String password,String phoneNumber,
     String street, String city,String state, String zip, String email, int cartID, String position) throws SQLException {
         PreparedStatement preparedStatement;
@@ -271,12 +329,12 @@ public class LoginModel {
         preparedStatement.executeUpdate();
         preparedStatement = connection.prepareStatement(findQuery);
         ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
         int cartID = resultSet.getInt(1);
         resultSet.close();
         preparedStatement.close();
         connection.close();
         return cartID;
-
     }
     public void addToShoppingCart(int userID,int lineItemID) throws SQLException {
 
@@ -322,14 +380,6 @@ public class LoginModel {
                 counter++;
             }
         }
-//             (resultSet.getInt(counter) != 0) {
-//                if (counter == 13) {
-//                    break;
-//                }
-//                result.add(resultSet.getInt(counter));
-//                counter++;
-//            }
-//        }
         preparedStatement.close();
         resultSet.close();
         connection.close();
@@ -378,6 +428,141 @@ public class LoginModel {
         resultSet.close();
         connection.close();
         return inventoryItem;
+    }
+    public int createInvoice(int userID) throws SQLException {
+        PreparedStatement preparedStatement = null;
+        String query = "INSERT INTO Invoice"  +"(UserID,TotalAmount,Items,IsPaid) VALUES("
+                +"'" + userID + "', "+"'" + "?" + "', "+"'" + "?" + "', "+"'" + 0 + "'); ";
+        String findQuery = "SELECT last_insert_rowid()";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.executeUpdate();
+        preparedStatement = connection.prepareStatement(findQuery);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+        int invoiceID = resultSet.getInt(1);
+        resultSet.close();
+        preparedStatement.close();
+        connection.close();
+        return invoiceID;
+    }
+    public void updateInvoiceByID(int userID,double totalAmount, String itemsDescription, boolean isPaid) throws SQLException {
+        int booleanInt;
+        if(isPaid = false){
+            booleanInt = 0;
+        }else{
+            booleanInt = 1;
+        }
+        PreparedStatement preparedStatement;
+        String query = "UPDATE \"Invoice\" SET \"Items\" = ?,\"TotalAmount\" = ?,\"IsPaid\" = ? WHERE UserID = ? AND IsPaid = 0";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setDouble(2,totalAmount);
+        preparedStatement.setString(1,itemsDescription);
+        preparedStatement.setInt(3,booleanInt);
+        preparedStatement.setInt(4,userID);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
+        connection.close();
+    }
+    public ArrayList<Invoice> getInvoicesByUserID(int userID) throws SQLException {
+        ArrayList<Invoice> invoices = new ArrayList<>();
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String query = "SELECT * FROM Invoice WHERE UserID=?";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1,userID);
+        resultSet =preparedStatement.executeQuery();
+        while(resultSet.next()){
+            Invoice invoice = new Invoice(0,0,0,"0",false);
+            invoice.setInvoiceID(resultSet.getInt(1));
+            invoice.setUserID(resultSet.getInt(2));
+            invoice.setTotalAmount(resultSet.getDouble(3));
+            invoice.setItems(resultSet.getString(4));
+            if(resultSet.getInt(5) == 0){
+                invoice.setPaid(false);
+            }else{
+                invoice.setPaid(true);
+            }
+            if(invoice.isPaid() == true){
+                invoices.add(invoice);
+            }
+        }
+        preparedStatement.close();
+        resultSet.close();
+        connection.close();
+        return invoices;
+    }
+    public Invoice getInvoiceByInvoiceID(int invoiceID) throws SQLException {
+        Invoice invoice = new Invoice(0,0,0,"0",false);
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String query = "SELECT * FROM Invoice WHERE InvoiceID = ?";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1,invoiceID);
+        resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+        invoice.setInvoiceID(resultSet.getInt(1));
+        invoice.setUserID(resultSet.getInt(2));
+        invoice.setTotalAmount(resultSet.getDouble(3));
+        invoice.setItems(resultSet.getString(4));
+        if(resultSet.getInt(5) == 0){
+            invoice.setPaid(false);
+        }else{
+            invoice.setPaid(true);
+        }
+        preparedStatement.close();
+        resultSet.close();
+        connection.close();
+        return invoice;
+    }
+    public void updateAccountInfo(int userID, String section, String newInfo) throws SQLException {
+        PreparedStatement preparedStatement;
+        String query = "UPDATE \"People\" SET \"" + section +"\" = ? WHERE ID = ?";
+        System.out.println(query);
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1,newInfo);
+        preparedStatement.setInt(2,userID);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
+        connection.close();
+    }
+    public void deleteProductByID(int productID) throws SQLException {
+        PreparedStatement preparedStatement;
+        String query = "DELETE from Product WHERE ProductID = ?";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1,productID);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
+        connection.close();
+    }
+    public ArrayList<InventoryItem> searchProductByLikeString(String likeString) throws SQLException {
+        int productID;
+        String type;
+        String name;
+        double price;
+        String description;
+        String imageUrl;
+        int quantity;
+        ArrayList<InventoryItem> inventoryItems = new ArrayList<>();
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String query = "SELECT * FROM \"Product\" WHERE \"Name\" LIKE '%" + likeString +"%'";
+        preparedStatement = connection.prepareStatement(query);
+        resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()){
+            productID = resultSet.getInt(1);
+            type = resultSet.getString(2);
+            name = resultSet.getString(3);
+            price = resultSet.getDouble(4);
+            description = resultSet.getString(5);
+            imageUrl = resultSet.getString(6);
+            quantity = resultSet.getInt(7);
+            InventoryItem inventoryItem = new InventoryItem(productID,type,name,price,description,imageUrl,quantity);
+            inventoryItems.add(inventoryItem);
+        }
+        preparedStatement.close();
+        resultSet.close();
+        connection.close();
+        return inventoryItems;
     }
 
     public void restartConnection(){

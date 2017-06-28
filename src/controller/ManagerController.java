@@ -18,6 +18,8 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
@@ -158,6 +160,11 @@ public class ManagerController implements Initializable{
 
         loginModel.createItem(sectionComboBox.getSelectionModel().getSelectedItem(),nameField.getText(),
                 Double.valueOf(priceField.getText()),descriptionArea.getText(),productID,imageUrl,Integer.valueOf(quantityField.getText()));
+        loginModel.restartConnection();
+    }
+    public void removeItem(ActionEvent event) throws SQLException {
+        int productID = Integer.parseInt(productIDField.getText());
+        loginModel.deleteProductByID(productID);
         loginModel.restartConnection();
     }
     public void getImageUrl(ActionEvent event){

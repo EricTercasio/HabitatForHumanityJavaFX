@@ -22,8 +22,8 @@
       <Label fx:id="cardNumber" layoutX="130.0" layoutY="309.0" text="Card Number" />
       <Label fx:id="expiration" layoutX="130.0" layoutY="356.0" text="Expiration" />
       <Label fx:id="securityCode" layoutX="130.0" layoutY="406.0" text="Security code" />
-      <Button fx:id="backButton" layoutX="209.0" layoutY="472.0" mnemonicParsing="false" text="Back" />
-      <Button fx:id="submitButton" layoutX="316.0" layoutY="472.0" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="51.0" text="Pay" />
+      <Button fx:id="backButton" layoutX="209.0" layoutY="472.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <Button fx:id="submitButton" layoutX="316.0" layoutY="472.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pay" prefHeight="31.0" prefWidth="51.0" text="Pay" />
       <ImageView fx:id="imageViewLeft" fitHeight="45.0" fitWidth="89.0" layoutX="197.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imageViewRight" fitHeight="45.0" fitWidth="89.0" layoutX="304.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="invoiceNumber" layoutX="253.0" layoutY="125.0" text="Label" />

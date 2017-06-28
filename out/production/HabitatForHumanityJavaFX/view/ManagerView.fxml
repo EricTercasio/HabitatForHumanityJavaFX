@@ -100,7 +100,7 @@
                   <TextField fx:id="productIDField" />
                </children>
             </HBox>
-            <Button fx:id="removeButton" mnemonicParsing="false" text="Remove" />
+            <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeItem" text="Remove" />
          </children>
       </VBox>
    </children>

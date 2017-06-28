@@ -163,6 +163,8 @@ public class CreateAccountController implements Initializable{
         loginModel.restartConnection();
         loginModel.setUserCart(userID,cartID);
         loginModel.restartConnection();
+        loginModel.createInvoice(userID);
+        loginModel.restartConnection();
 
     }
     public void back(ActionEvent event) throws IOException {
