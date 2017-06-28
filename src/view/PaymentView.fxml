@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="547.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentController">
+   <children>
+      <Label fx:id="headerText" layoutX="139.0" layoutY="33.0" text="Complete Purchase" textFill="#3918e1">
+         <font>
+            <Font name="Century Gothic" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="invoiceText" layoutX="130.0" layoutY="125.0" text="Invoice #" />
+      <Label fx:id="amountToPay" layoutX="130.0" layoutY="166.0" text="Amount to pay : " />
+      <Label fx:id="creditCardType" layoutX="130.0" layoutY="213.0" text="Credit Card Type" />
+      <Label fx:id="nameOnCard" layoutX="128.0" layoutY="261.0" text="Name on card" />
+      <Label fx:id="cardNumber" layoutX="130.0" layoutY="309.0" text="Card Number" />
+      <Label fx:id="expiration" layoutX="130.0" layoutY="356.0" text="Expiration" />
+      <Label fx:id="securityCode" layoutX="130.0" layoutY="406.0" text="Security code" />
+      <Button fx:id="backButton" layoutX="209.0" layoutY="472.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="submitButton" layoutX="316.0" layoutY="472.0" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="51.0" text="Pay" />
+      <ImageView fx:id="imageViewLeft" fitHeight="45.0" fitWidth="89.0" layoutX="197.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageViewRight" fitHeight="45.0" fitWidth="89.0" layoutX="304.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="invoiceNumber" layoutX="253.0" layoutY="125.0" text="Label" />
+      <Label fx:id="amount" layoutX="253.0" layoutY="166.0" text="Label" />
+      <ComboBox fx:id="cardComboBox" layoutX="253.0" layoutY="208.0" prefWidth="150.0" />
+      <TextField fx:id="nameField" layoutX="255.0" layoutY="256.0" />
+      <TextField fx:id="cardField1" layoutX="254.0" layoutY="304.0" prefHeight="31.0" prefWidth="65.0" />
+      <TextField fx:id="cardField2" layoutX="333.0" layoutY="304.0" prefHeight="31.0" prefWidth="65.0" />
+      <TextField fx:id="cardField3" layoutX="410.0" layoutY="304.0" prefHeight="31.0" prefWidth="65.0" />
+      <TextField fx:id="cardField4" layoutX="489.0" layoutY="304.0" prefHeight="31.0" prefWidth="65.0" />
+      <ComboBox fx:id="expirationMonth" layoutX="253.0" layoutY="351.0" prefHeight="31.0" prefWidth="66.0" />
+      <ComboBox fx:id="expirationYear" layoutX="333.0" layoutY="351.0" prefHeight="31.0" prefWidth="66.0" />
+      <TextField fx:id="securityField" layoutX="253.0" layoutY="401.0" />
+   </children>
+</AnchorPane>

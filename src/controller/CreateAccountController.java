@@ -20,6 +20,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
@@ -153,7 +154,14 @@ public class CreateAccountController implements Initializable{
 
     public void createAccount(ActionEvent event) throws SQLException {
         loginModel.createCustomer(firstNameField.getText(),lastNameField.getText(),usernameField.getText(),passwordField.getText(),phoneNumberField.getText(),streetField.getText(),
-                cityField.getText(),stateComboBox.getSelectionModel().getSelectedItem(),zipField.getText(),emailField.getText(),200,"Customer");
+                cityField.getText(),stateComboBox.getSelectionModel().getSelectedItem(),zipField.getText(),emailField.getText(),0,"Customer");
+        loginModel.restartConnection();
+        ArrayList list = loginModel.isLogin(usernameField.getText(),passwordField.getText());
+        int userID = (int) list.get(1);
+        loginModel.restartConnection();
+        int cartID = loginModel.createShoppingCart(userID);
+        loginModel.restartConnection();
+        loginModel.setUserCart(userID,cartID);
         loginModel.restartConnection();
 
     }

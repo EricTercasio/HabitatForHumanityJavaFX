@@ -12,14 +12,16 @@ public class InventoryItem {
     private double price;
     private String description;
     private String imageUrl;
+    private int quantity;
 
-    public InventoryItem(int productID, String type, String name, double price, String description, String imageUrl) {
+    public InventoryItem(int productID, String type, String name, double price, String description, String imageUrl, int quantity) {
         this.productID = productID;
         this.type = type;
         this.name = name;
         this.price = price;
         this.description = description;
         this.imageUrl = imageUrl;
+        this.quantity = quantity;
     }
 
     public int getProductID() {
@@ -68,6 +70,14 @@ public class InventoryItem {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override

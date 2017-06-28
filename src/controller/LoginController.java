@@ -1,4 +1,5 @@
 package controller;
+import app.Start;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,7 @@ import javafx.stage.Stage;
 import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
@@ -80,11 +82,27 @@ public class LoginController implements Initializable{
     public void login(ActionEvent event) throws IOException {
         String username = usernameField.getText();
         String password = passwordField.getText();
-        String position = loginModel.isLogin(username,password);
+        ArrayList arrayList = loginModel.isLogin(username,password);
 
-        if(position != null){
+
+        if(arrayList != null){
+            String position = (String) arrayList.get(0);
+            int userID = (int) arrayList.get(1);
             if(position.equals("Customer")) {
-                changeScene("/view/ShoppingView.fxml", event);
+                Start.setUserID(userID);
+                System.out.println(Start.getUserID());
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ShoppingView.fxml"));
+                Parent root = loader.load();
+                ShoppingController shoppingController;
+                shoppingController = loader.getController();
+                shoppingController.setUserID(userID);
+                Scene newScene = new Scene(root);
+                Stage newStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                newStage.close();
+                newStage.setScene(newScene);
+                newStage.centerOnScreen();
+                newStage.show();
+
             }
             else if(position.equals("Manager")){
                 changeScene("/view/ManagerView.fxml",event);

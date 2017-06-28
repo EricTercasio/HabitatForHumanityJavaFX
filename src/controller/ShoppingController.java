@@ -1,4 +1,5 @@
 package controller;
+import app.Start;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +14,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.InventoryItem;
-import org.sqlite.util.StringUtils;
-
-import javax.swing.text.html.Option;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -140,6 +138,8 @@ public class ShoppingController  implements Initializable{
     private ArrayList<Button> addToCartButtons = new ArrayList<>();
 
     private ArrayList<Hyperlink> descriptionLinks = new ArrayList<>();
+
+    private int userID;
     @FXML
     void f70000(ActionEvent event) {
 
@@ -147,6 +147,7 @@ public class ShoppingController  implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        userID = Start.getUserID();
         itemBoxs.add(itemBox1);
         itemBoxs.add(itemBox2);
         itemBoxs.add(itemBox3);
@@ -197,19 +198,41 @@ public class ShoppingController  implements Initializable{
         loginModel.restartConnection();
     }
 
-    public void addToCart(ActionEvent event){
+    public void addToCart(ActionEvent event) throws SQLException {
+        loginModel.restartConnection();
+        Button button = (Button) event.getSource();
+        VBox parent = (VBox) button.getParent();
+        Label label = (Label) parent.getChildren().get(0);
+        Label priceLabel = (Label) parent.getChildren().get(4);
+        String id = label.getText();
+        String productID = id.substring(5);
+        String price = priceLabel.getText().substring(1);
+        double priceOfItem = Double.valueOf(price);
+
         TextInputDialog inputDialog = new TextInputDialog();
         inputDialog.setContentText("Enter the quantity");
         inputDialog.setHeaderText("Quantity");
         Optional<String> value = inputDialog.showAndWait();
-        if(!value.get().isEmpty()  && value.get().matches("-?\\d+(\\.\\d+)?") && Integer.valueOf(value.get()) > 0){
+        if (!value.get().isEmpty() && value.get().matches("-?\\d+(\\.\\d+)?") && Integer.valueOf(value.get()) > 0) {
+            System.out.println(productID + value.get());
+            int lineItemID = loginModel.createLineItem(Integer.parseInt(productID), Integer.parseInt(value.get()));
+            loginModel.restartConnection();
+                loginModel.restartConnection();
+                loginModel.addToShoppingCart(userID, lineItemID);
+                loginModel.restartConnection();
+                double currentPrice = loginModel.getTotalByUserID(userID);
+                double priceAndQuantity = priceOfItem * Double.valueOf(value.get());
+                double total = currentPrice + priceAndQuantity;
+                loginModel.restartConnection();
+                loginModel.setCartTotal(userID,total);
 
-        }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Not the correct format");
-            alert.showAndWait();
-        }
-        }
+        } else {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setContentText("Not the correct format");
+        alert.showAndWait();
+    }
+        loginModel.restartConnection();
+    }
     public void openDescription(ActionEvent event) throws SQLException {
          Alert dialog = new Alert(Alert.AlertType.INFORMATION);
          Hyperlink hyperlink = (Hyperlink) event.getSource();
@@ -241,7 +264,7 @@ public class ShoppingController  implements Initializable{
                 imageView.setPreserveRatio(true);
                 imageView.setSmooth(true);
                 imageView.setCache(true);
-                imageView.setFitWidth(50);
+                imageView.setFitWidth(90);
                 if (!itemBoxs.get(i).getChildren().isEmpty()) {
                     itemBoxs.get(i).getChildren().clear();
                 }
@@ -252,7 +275,11 @@ public class ShoppingController  implements Initializable{
 
     }
     public void logout(ActionEvent event) throws IOException {
+
         changeScene("/view/LoginView.fxml", event);
+    }
+    public void goToCart(ActionEvent event) throws IOException {
+        changeScene("/view/ShoppingCartView.fxml",event);
     }
     public void changeScene(String url, ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(url));
@@ -267,5 +294,10 @@ public class ShoppingController  implements Initializable{
         for(int i = 0; i < itemBoxs.size(); i++){
             itemBoxs.get(i).getChildren().clear();
         }
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+
     }
 }

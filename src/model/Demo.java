@@ -4,6 +4,7 @@ import controller.LoginModel;
 import controller.SqliteConnection;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  * Created by Kitcatski on 6/21/2017.
@@ -15,7 +16,13 @@ public class Demo {
         //System.out.println(metal.getProductID());
         SqliteConnection.Connector();
         LoginModel loginModel = new LoginModel();
-        loginModel.getProduct("Wood");
+        ArrayList<Integer> lineItemIDs = loginModel.getLineItemIDsFromCart(9);
+        for(int i =0; i < lineItemIDs.size();i++){
+            System.out.println(lineItemIDs.get(i));
+        }
+        loginModel.restartConnection();
+        //System.out.println(loginModel.getLineItemByID(20).toString());
+        loginModel.getProductByID(9928);
 
     }
 }

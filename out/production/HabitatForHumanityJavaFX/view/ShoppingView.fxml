@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="714.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShoppingController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="841.0" prefWidth="1139.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShoppingController">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -18,10 +18,10 @@
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="163.0" minHeight="0.0" prefHeight="64.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="184.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="458.0" minHeight="10.0" prefHeight="201.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="302.0" minHeight="10.0" prefHeight="302.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <HBox fx:id="accountBox" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
@@ -31,11 +31,11 @@
                   <Image url="@../img/shoppingCart.png" />
                </image>
             </ImageView>
-            <Hyperlink fx:id="cartText" text="Cart" />
+            <Hyperlink fx:id="cartText" onAction="#goToCart" text="Cart" />
             <Hyperlink fx:id="myAccountText" text="My Account" />
          </children>
       </HBox>
-      <HBox fx:id="woodBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+      <HBox fx:id="woodBox" alignment="CENTER" prefHeight="104.0" prefWidth="228.0" GridPane.rowIndex="1">
          <children>
             <Button fx:id="woodButton" alignment="CENTER" mnemonicParsing="false" onAction="#woodSection" prefHeight="31.0" prefWidth="85.0" text="Wood" />
          </children>
@@ -55,7 +55,7 @@
             <Button fx:id="plasticsButton" mnemonicParsing="false" onAction="#plasticSection" prefHeight="31.0" prefWidth="77.0" text="Plastics" />
          </children>
       </HBox>
-      <HBox fx:id="miscBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+      <HBox fx:id="miscBox" alignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1">
          <children>
             <Button fx:id="miscButton" mnemonicParsing="false" onAction="#miscSection" prefHeight="31.0" prefWidth="77.0" text="Misc" />
          </children>
@@ -74,7 +74,7 @@
             <Hyperlink fx:id="descriptionLink1" onAction="#openDescription" text="Description" visible="false" />
             <Button fx:id="addToCartButton1" mnemonicParsing="false" onAction="#addToCart" text="Add To Cart" visible="false" />
          </children></VBox>
-      <VBox fx:id="itemBox2" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      <VBox fx:id="itemBox2" prefHeight="330.0" prefWidth="228.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <children>
             <Button fx:id="addToCartButton2" mnemonicParsing="false" onAction="#addToCart" text="Add To Cart" visible="false" />
             <Hyperlink fx:id="descriptionLink2" onAction="#openDescription" text="Description" visible="false" />
@@ -99,6 +99,6 @@
             <Button fx:id="addToCartButton6" mnemonicParsing="false" onAction="#addToCart" text="Add To Cart" visible="false" />
             <Hyperlink fx:id="descriptionLink6" onAction="#openDescription" text="Description" visible="false" />
          </children></VBox>
-      <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" text="Logout" textFill="RED" />
+      <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" text="Logout" textFill="RED" GridPane.rowIndex="4" />
    </children>
 </GridPane>
